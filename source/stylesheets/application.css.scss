@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+$firmafon-green: #48A161;
+$primary-color: $firmafon-green;
+
+$topbar-bg: $firmafon-green;
+
+@import 'highlighting';
+
+@import "foundation/scss/foundation";
+
+pre {
+  font-family: 'Menlo', 'Andale Mono', monospace;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+nav.top-bar {
+  body.rest & li.rest > a,
+  body.integrations & li.integrations > a {
+    background-color: rgba(#000, .2); 
+  }
+}

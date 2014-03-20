@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= data.page.title || "Ingen titel" %> - Firmafon API Documentation</title>
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="contain-to-grid fixed">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">Firmafon API</a></h1>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul>
+            <li class="has-dropdown rest">
+              <a href="/rest/">REST</a>
+              <ul class="dropdown">
+                <li><a href="/rest/authentication/">Authentication</a></li>
+                <li><a href="/rest/resources/">Resources</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown integrations">
+              <a href="/integrations/">Integrations</a>
+              <ul class="dropdown">
+                <li>
+                  <a href="/integrations/iframe/">Iframe</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <section id="content" class="container">
+      <div class="row">
+        <%= yield %>
+        <section id="foot">
+          <footer class="medium-12 columns">
+            <p>Support: <a href="https://kunderservice.firmafon.dk">Kundeservice</a></p>
+          </footer>
+        </section>
+      </div>
+    </section>
+    <%= javascript_include_tag  "application" %>
+  </body>
+</html>
