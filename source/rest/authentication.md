@@ -7,7 +7,7 @@ The Firmafon v2 REST API can only be accessed via [OAuth 2.0](http://oauth.net/2
 
 ## Sign up
 
-To use the Firmafon v2 REST API you need to first [register your application](http://app.firmafon.dk/api/v2/applications/new). Given that each application is tied to it's own URL you might want to register one for development and one for production.
+To use the Firmafon v2 REST API you need to first [register your application](http://app.firmafon.dk/developers/applications/new). Given that each application is tied to it's own URL you might want to register one for development and one for production.
 
 ## Obtaining an Access Token
 
