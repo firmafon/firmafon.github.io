@@ -25,9 +25,20 @@ Announcements are general news about the system. They are shown in the `/agent` 
 
 ## <a href="#calls" name="calls">Calls</a>
 
-Oh Calls, where do I begin?
+Oh Calls, where do we begin?
+
+If all you're trying to do is get some historical data then there's not much to it. If you want to _understand_ how it's all connected, [read the detailed Calls guide](/rest/calls/).
 
 ### <a href="#get_calls" name="get_calls">GET /calls</a>
+
+**Parameters:**
+
+<%= parameters(
+  limit: 'Specify how many you want. Default: 30, Maximum: 100.',
+  endpoint: 'Filter calls by `endpoint`. Example: `Reception#123`.',
+  number: 'Filter calls by a number. Either to or from. Example: `4512345678`.',
+  started_at_lt_or_eq: "Page the calls by using the `started_at` attribute of the last of the already fetched calls. Example: `#{Time.now.to_s}`."
+) %>
 
 **Response example:**
 
@@ -36,6 +47,10 @@ Oh Calls, where do I begin?
 ```
 
 ### <a href="#get_calls_id" name="get_calls_id">GET calls/:id</a>
+
+```json
+<%= pretty_json call: resource(:call) %>
+```
 
 ## <a href="#call_nodes" name="call_nodes">CallNodes</a>
 

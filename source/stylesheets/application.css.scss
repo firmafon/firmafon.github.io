@@ -11,7 +11,7 @@ $topbar-bg: $firmafon-green;
 
 pre {
   font-family: 'Menlo', 'Andale Mono', monospace;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.25;
 }
 
@@ -20,4 +20,8 @@ nav.top-bar {
   body.integrations & li.integrations > a {
     background-color: rgba(#000, .2); 
   }
+}
+
+dd {
+  padding-left: 2em;
 }

@@ -34,6 +34,18 @@ helpers do
     JSON.pretty_generate(obj) +
       "\n"
   end
+  def markdown(text)
+    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @renderer.render(text)
+  end
+  def parameters(params)
+    content_tag :dl do
+      params.map do |key, desc|
+        content_tag(:dt, content_tag(:code, key)) +
+        content_tag(:dd, markdown(desc))
+      end
+    end
+  end
 end
 
 configure :build do
