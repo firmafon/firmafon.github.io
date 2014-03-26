@@ -22,6 +22,12 @@ nav.top-bar {
   }
 }
 
-dd {
-  padding-left: 2em;
+dl.highlight {
+  padding: 10px;
+}
+
+dl dd {
+  padding: 0 2em;
+  margin: 0;
+  p { margin: 0; }
 }

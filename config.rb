@@ -31,20 +31,32 @@ helpers do
     JSON.parse(open("./data/v2/#{key}.json").read)
   end
   def pretty_json(obj)
-    JSON.pretty_generate(obj) +
-      "\n"
+    JSON.pretty_generate(obj)
   end
   def markdown(text)
     @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     @renderer.render(text)
   end
   def parameters(params)
-    content_tag :dl do
-      params.map do |key, desc|
-        content_tag(:dt, content_tag(:code, key)) +
-        content_tag(:dd, markdown(desc))
-      end
-    end
+    <<-MARKDOWN
+**Parameters:**
+
+<dl class="highlight">#{
+    params.map do |key, desc|
+      "<dt><code>#{key}</code></dt>
+      <dd>#{markdown desc}</dd>"
+    end.join("\n")
+    }</dl>
+MARKDOWN
+  end
+  def response(json)
+    <<-MARKDOWN
+**Response:**
+
+```json
+#{pretty_json json}
+```
+MARKDOWN
   end
 end
 
