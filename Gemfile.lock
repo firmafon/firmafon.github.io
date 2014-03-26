@@ -102,6 +102,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   middleman
   middleman-gh-pages
   middleman-livereload

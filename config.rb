@@ -27,6 +27,13 @@ activate :directory_indexes
 activate :syntax, line_numbers: false
 
 helpers do
+  def resource(key)
+    JSON.parse(open("./data/v2/#{key}.json").read)
+  end
+  def pretty_json(obj)
+    JSON.pretty_generate(obj) +
+      "\n"
+  end
 end
 
 configure :build do

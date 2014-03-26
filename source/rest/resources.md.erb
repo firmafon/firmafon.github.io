@@ -1,0 +1,101 @@
+---
+title: Resources
+layout: rest_layout
+---
+
+## <a href="#announcements" name="announcements">Announcements</a>
+
+Announcements are general news about the system. They are shown in the `/agent` interface until dismissed. Dismissing an announcement should [mark it as read](#post_announcements_id_mark_as_read).
+
+### <a href="#get_announcements" name="get_announcements">GET /announcements</a>
+
+**Response example:**
+
+```json
+<%= pretty_json announcements: [resource(:announcement)] %>
+```
+
+<h3><a href="#post_announcements_id_mark_as_read" name="post_announcements_id_mark_as_read">POST /announcements/:id/mark_as_read</a></h3>
+
+**Response example:**
+
+```json
+<%= pretty_json announcement: resource(:announcement) %>
+```
+
+## <a href="#calls" name="calls">Calls</a>
+
+Oh Calls, where do I begin?
+
+### <a href="#get_calls" name="get_calls">GET /calls</a>
+
+**Response example:**
+
+```json
+<%= pretty_json calls: [resource(:call)] %>
+```
+
+### <a href="#get_calls_id" name="get_calls_id">GET calls/:id</a>
+
+## <a href="#call_nodes" name="call_nodes">CallNodes</a>
+
+### <a href="#get_call_nodes_live" name="get_call_nodes_live">GET /call_nodes/live</a>
+
+### <a href="#get_call_nodes_hangup" name="get_call_nodes_hangup">GET /call_nodes/hangup</a></a>
+
+### <a href="#get_call_nodes_transfer" name="get_call_nodes_transfer">GET /call_nodes/transfer</a></a>
+
+### <a href="#get_call_nodes_id" name="get_call_nodes_id">GET /call_nodels</a></a>
+
+## <a href="#contacts" name="contacts">Contacts</a>
+
+### <a href="#get_contacts" name="get_contacts">GET /contacts</a></a>
+
+### <a href="#post_contacts" name="post_contacts">POST /contacts</a></a>
+
+### <a href="#get_contacts_id" name="get_contacts_id">GET /contacts/:id</a></a>
+
+### <a href="#put_contacts_id" name="put_contacts_id">PUT /contacts/:id</a></a>
+
+### <a href="#delete_contacts_id" name="delete_contacts_id">DELETE /contacts/:id</a></a>
+
+## <a href="#employees" name="employees">Employees</a>
+
+### <a href="#get_employee" name="get_employee">GET /employee</a></a>
+
+### <a href="#get_employees" name="get_employees">GET /employees</a></a>
+
+### <a href="#get_employees_id" name="get_employees_id">GET /employees/:id</a></a>
+
+### <a href="#put_employees_id" name="put_employees_id">PUT /employees/:id</a></a>
+
+### <a href="#post_employees_id_message" name="post_employees_id_message">POST /employees/:id/message</a></a>
+
+## <a href="#employee_groups" name="employee_groups">EmployeeGroups</a>
+
+### <a href="#get_employee_groups" name="get_employee_groups">GET /employee_groups</a></a>
+
+### <a href="#get_employee_groups_id" name="get_employee_groups_id">GET /employee_groups/:id</a></a>
+
+### <a href="#post_employee_groups_id_join" name="post_employee_groups_id_join">POST /employee_groups/:id/join</a></a>
+
+### <a href="#post_employee_groups_id_leave" name="post_employee_groups_id_leave">POST /employee_groups/:id/leave</a></a>
+
+### <a href="#post_employee_groups_id_message" name="post_employee_groups_id_message">POST /employee_groups/:id/message</a></a>
+
+## <a href="#receptions" name="receptions">Receptions</a>
+
+### <a href="#get_receptions" name="get_receptions">GET /receptions</a></a>
+
+### <a href="#get_receptions_id" name="get_receptions_id">GET /receptions/:id</a></a>
+
+## <a href="#voice_mails" name="voice_mails">VoiceMails</a>
+
+### <a href="#get_voice_mails" name="get_voice_mails">GET /voice_mails</a></a>
+
+### <a href="#get_voice_mails_id" name="get_voice_mails_id">GET /voice_mails/:id</a></a>
+
+### <a href="#put_voice_mails_id" name="put_voice_mails_id">PUT /voice_mails/:id</a></a>
+
+### <a href="#delete_voice_mails_id" name="delete_voice_mails_id">DELETE /voice_mails/:id</a></a>
+
