@@ -122,23 +122,109 @@ Contacts are additional info about a given phone number. They are either provide
 
 ### <a href="#post_contacts" name="post_contacts">POST /contacts</a>
 
+Create a contact. These map to the fields `to_contact` and `from_contact` in Calls.
+
+<%= parameters(
+  'contact[number]' => '`4512345678`',
+  'contact[name]' => 'Karsten Kontaktbegreb',
+  'contact[email]' => 'karsten@example.com'
+) %>
+
+<%= response(
+  contact: resource(:contact)
+) %>
+
 ### <a href="#get_contacts_id" name="get_contacts_id">GET /contacts/:id</a>
+
+<%= response(
+  contact: resource(:contact)
+) %>
 
 ### <a href="#put_contacts_id" name="put_contacts_id">PUT /contacts/:id</a>
 
+Update a contact.
+
+<%= parameters(
+  'contact[number]' => '`4512345678`',
+  'contact[name]' => 'Karsten Kontaktbegreb',
+  'contact[email]' => 'karsten@example.com'
+) %>
+
+<%= response(
+  contact: resource(:contact)
+) %>
+
 ### <a href="#delete_contacts_id" name="delete_contacts_id">DELETE /contacts/:id</a>
+
+<%= parameters(
+  id: '**Required:** ID of the contact'
+) %>
+
+**Returns nothing with status code `200`**
 
 ## <a href="#employees" name="employees">Employees</a>
 
+Employees are your colleagues.
+
 ### <a href="#get_employee" name="get_employee">GET /employee</a>
+
+Returns an Employee object of the authenticated employee.
+
+<%= response(
+  employee: resource(:employee)
+) %>
 
 ### <a href="#get_employees" name="get_employees">GET /employees</a>
 
+Returns an array of the current employee's colleagues ordered by first name.
+
+<%= response(
+  employees: [resource(:employee)]
+) %>
+
 ### <a href="#get_employees_id" name="get_employees_id">GET /employees/:id</a>
+
+Returns a specific colleague.
+
+<%= parameters(
+  id: '**Required:** ID of the employee'
+) %>
+
+<%= response(
+  employee: resource(:employee)
+) %>
 
 ### <a href="#put_employees_id" name="put_employees_id">PUT /employees/:id</a>
 
+Update an employee.
+
+<%= parameters(
+  id: '**Required:** ID of the employee',
+  "employee[do_not_disturb]" => '`true` | `false`',
+  "employee[dnd_timeout_at]" => '2013-12-16T17 =>12 =>26+01 =>00',
+  "employee[employee_group_ids]" => "[1, 2] **Requires admin privileges.**"
+) %>
+
+<%= response(
+  employee: resource(:employee)
+) %>
+
 ### <a href="#post_employees_id_message" name="post_employees_id_message">POST /employees/:id/message</a>
+
+Send an SMS to the given employee. **NB: These are cheap but [not free](https://www.firmafon.dk/prisliste/ "Firmafon Prisliste") - Look for "Web SMS".
+
+The sender will be shown as either the current employee's number or name.
+
+Not available for companies in trial.
+
+<%= parameters(
+  id: '**Required:** ID of the employee',
+  "message[body]" => '**Required:** The contents of your message.'
+) %>
+
+<%= response(
+  { sent: true }
+) %>
 
 ## <a href="#employee_groups" name="employee_groups">EmployeeGroups</a>
 

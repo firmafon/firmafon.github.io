@@ -15,6 +15,10 @@ pre {
   line-height: 1.25;
 }
 
+code {
+  color: #db1847;
+}
+
 nav.top-bar {
   body.rest & li.rest > a,
   body.integrations & li.integrations > a {

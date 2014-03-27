@@ -1,0 +1,19 @@
+{
+  "type":"Employee",
+  "id":1,
+  "name":"Michael Medarbejder",
+  "number":"4571999917",
+  "do_not_disturb":false,
+  "dnd_timeout_at":"2013-12-16T17:12:26+01:00",
+  "live_presence":"available",
+  "speed_dial":{
+    "digit":17
+  },
+  "has_switch":true,
+  "cloak_reception":null,
+  "employee_group_ids":[ 1, 2 ],
+  "in_trial":false,
+  "endpoint":"Employee#1",
+  "company_id":1
+}
+

@@ -37,16 +37,21 @@ helpers do
     @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     @renderer.render(text)
   end
+  def parameter_list(params)
+    params.map do |key, desc_or_params|
+      "<dt><code>#{key}</code></dt>" +
+      if desc_or_params.is_a?(String)
+        "<dd>#{markdown desc_or_params}</dd>"
+      else
+        "<dd><dl>#{parameter_list desc_or_params}</dl></dd>"
+      end
+    end.join("\n")
+  end
   def parameters(params)
     <<-MARKDOWN
 **Parameters:**
 
-<dl class="highlight">#{
-    params.map do |key, desc|
-      "<dt><code>#{key}</code></dt>
-      <dd>#{markdown desc}</dd>"
-    end.join("\n")
-    }</dl>
+<dl class="highlight">#{parameter_list params}</dl>
 MARKDOWN
   end
   def response(json)
