@@ -1,0 +1,8 @@
+{
+  "id":1,
+  "name":"Hovednummer",
+  "phone_number":{
+    "number":"4571999999"
+  },
+  "endpoint":"Reception#1"
+}

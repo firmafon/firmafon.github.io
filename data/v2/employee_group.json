@@ -1,0 +1,11 @@
+{
+  "type":"EmployeeGroup",
+  "id":1,
+  "name":"Kunderservice",
+  "live_presence":"available",
+  "speed_dial":{
+    "digit": 123
+  },
+  "employee_ids":[1,2],
+  "endpoint":"EmployeeGroup#1"
+}

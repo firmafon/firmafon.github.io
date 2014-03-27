@@ -230,27 +230,138 @@ Not available for companies in trial.
 
 ### <a href="#get_employee_groups" name="get_employee_groups">GET /employee_groups</a>
 
+Returns a collection of EmployeeGroups.
+
+<%= response(
+  employee_groups: [resource(:employee_group)]
+) %>
+
 ### <a href="#get_employee_groups_id" name="get_employee_groups_id">GET /employee_groups/:id</a>
+
+Returns a specific EmployeeGroup.
+
+<%= parameters(
+  id: '**Required:** ID of the employee group',
+) %>
+
+<%= response(
+  employee_group: resource(:employee_group)
+) %>
 
 ### <a href="#post_employee_groups_id_join" name="post_employee_groups_id_join">POST /employee_groups/:id/join</a>
 
+Join an employee group as the current employee.
+
+**NB:** Requires switch for current employee.
+
+<%= parameters(
+  id: '**Required:** ID of the employee group',
+) %>
+
+<%= response(
+  employee_group: resource(:employee_group)
+) %>
+
 ### <a href="#post_employee_groups_id_leave" name="post_employee_groups_id_leave">POST /employee_groups/:id/leave</a>
 
+Leave an employee group as the current employee.
+
+**NB:** Requires switch for current employee.
+
+<%= parameters(
+  id: '**Required:** ID of the employee group',
+) %>
+
+<%= response(
+  employee_group: resource(:employee_group)
+) %>
+
 ### <a href="#post_employee_groups_id_message" name="post_employee_groups_id_message">POST /employee_groups/:id/message</a>
+
+Send an SMS to every employee in the given employee group. **NB: These are cheap but [not free](https://www.firmafon.dk/prisliste/ "Firmafon Prisliste") - Look for "Web SMS".
+
+The sender will be shown as either the current employee's number or name.
+
+Not available for companies in trial.
+
+<%= parameters(
+  id: '**Required:** ID of the employee group',
+  "message[body]" => '**Required:** The contents of your message.'
+) %>
+
+<%= response(
+  { sent: true }
+) %>
 
 ## <a href="#receptions" name="receptions">Receptions</a>
 
 ### <a href="#get_receptions" name="get_receptions">GET /receptions</a>
 
+Get a collection of Receptions.
+
+<%= response(
+  receptions: [resource(:reception)]
+) %>
+
 ### <a href="#get_receptions_id" name="get_receptions_id">GET /receptions/:id</a>
+
+Get a specific Reception.
+
+<%= parameters(
+  id: '**Required:** ID of the reception.',
+) %>
+
+<%= response(
+  reception: resource(:reception)
+) %>
 
 ## <a href="#voice_mails" name="voice_mails">VoiceMails</a>
 
 ### <a href="#get_voice_mails" name="get_voice_mails">GET /voice_mails</a>
 
+<%= parameters(
+  limit: 'Specify how many you want. Default: 30, Maximum: 100.',
+  endpoint: 'Filter voice_mails by `endpoint`. Example: `Reception#123`.',
+  number: 'Filter voice_mails by a number. Either to or from. Example: `4512345678`.',
+  created_at_lt_or_eq: "Page the voice_mails by using the `started_at` attribute of the last of the already fetched voice_mails. Example: `#{Time.now.to_s}`."
+) %>
+
+<%= response(
+  voice_mails: [resource(:voice_mail)]
+) %>
+
 ### <a href="#get_voice_mails_id" name="get_voice_mails_id">GET /voice_mails/:id</a>
+
+Get a specific voice mail.
+
+<%= parameters(
+  id: '**Required:** ID of the voice mail.',
+) %>
+
+<%= response(
+  voice_mail: resource(:voice_mail)
+) %>
 
 ### <a href="#put_voice_mails_id" name="put_voice_mails_id">PUT /voice_mails/:id</a>
 
+Update a specific voice mail.
+
+<%= parameters(
+  id: '**Required:** ID of the voice mail.',
+  "voice_mail[heard]" => "true"
+) %>
+
+<%= response(
+  voice_mail: resource(:voice_mail)
+) %>
+
 ### <a href="#delete_voice_mails_id" name="delete_voice_mails_id">DELETE /voice_mails/:id</a>
+
+Delete a specific voice mail.
+
+<%= parameters(
+  id: '**Required:** ID of the voice mail.'
+) %>
+
+**Returns status code `200`.**
 
