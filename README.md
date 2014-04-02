@@ -10,5 +10,7 @@ $ bundle exec middleman server
 
 ## Bower?
 
+```sh
 $ brew install node
 $ npm install bower -g
+```
