@@ -3,69 +3,69 @@
   <div class="medium-4 columns panel">
     <h4>Basics</h4>
     <ul>
-      <li><a href="/rest/">Intro</a></li>
-      <li><a href="/rest/authentication/">Authentication</a></li>
-      <li><a href="/rest/examples/">Examples</a></li>
+      <li><%= link_to "Intro", "/rest/" %></li>
+      <li><%= link_to "Authentication", "/rest/authentication/" %></li>
+      <li><%= link_to "Examples", "/rest/examples/" %></li>
     </ul>
 
     <hr>
 
     <h4>Resources</h4>
 
-    <h5><a href="/rest/resources/#announcements">Announcements</a></h5>
+    <h5><%= link_to "Announcements", "/rest/resources/#announcements" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_announcements">GET /announcements</a></li>
-      <li><a href="/rest/resources/#post_announcements_id_mark_as_read/">POST&nbsp;/announcements/:id/mark_as_read</a></li>
+      <li><%= link_to "GET /announcements", "/rest/resources/#get_announcements" %></li>
+      <li><%= link_to "POST&nbsp;/announcements/:id/mark_as_read", "/rest/resources/#post_announcements_id_mark_as_read/" %></li>
     </ul>
-    <h5><a href="/rest/resources/#calls">Calls</a></h5>
+    <h5><%= link_to "Calls", "/rest/resources/#calls" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_calls">GET /calls</a></li>
-      <li><a href="/rest/resources/#get_calls_id">GET /calls/:id</a></li>
+      <li><%= link_to "GET /calls", "/rest/resources/#get_calls" %></li>
+      <li><%= link_to "GET /calls/:id", "/rest/resources/#get_calls_id" %></li>
     </ul>
-    <h5><a href="/rest/resources/#callnodes">CallNodes</a></h5>
+    <h5><%= link_to "CallNodes", "/rest/resources/#callnodes" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_call_nodes_live">GET /call_nodes/live</a></li>
-      <li><a href="/rest/resources/#post_call_nodes_cancel_node_uuid_transfer">POST /call_nodes/:node_uuid/cancel_transfer</a></li>
-      <li><a href="/rest/resources/#post_call_nodes_node_uuid_hangup">POST /call_nodes/:node_uuid/hangup</a></li>
-      <li><a href="/rest/resources/#post_call_nodes_node_uuid_transfer">POST /call_nodes/:node_uuid/transfer</a></li>
-      <li><a href="/rest/resources/#get_call_nodes_id">GET /call_nodels</a></li>
+      <li><%= link_to "GET /call_nodes/live", "/rest/resources/#get_call_nodes_live" %></li>
+      <li><%= link_to "POST /call_nodes/:node_uuid/cancel_transfer", "/rest/resources/#post_call_nodes_cancel_node_uuid_transfer" %></li>
+      <li><%= link_to "POST /call_nodes/:node_uuid/hangup", "/rest/resources/#post_call_nodes_node_uuid_hangup" %></li>
+      <li><%= link_to "POST /call_nodes/:node_uuid/transfer", "/rest/resources/#post_call_nodes_node_uuid_transfer" %></li>
+      <li><%= link_to "GET /call_nodels", "/rest/resources/#get_call_nodes_id" %></li>
     </ul>
-    <h5><a href="/rest/resources/#contacts">Contacts</a></h5>
+    <h5><%= link_to "Contacts", "/rest/resources/#contacts" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_contacts">GET /contacts</a></li>
-      <li><a href="/rest/resources/#post_contacts">POST /contacts</a></li>
-      <li><a href="/rest/resources/#get_contacts_id">GET /contacts/:id</a></li>
-      <li><a href="/rest/resources/#put_contacts_id">PUT /contacts/:id</a></li>
-      <li><a href="/rest/resources/#delete_contacts_id">DELETE /contacts/:id</a></li>
+      <li><%= link_to "GET /contacts", "/rest/resources/#get_contacts" %></li>
+      <li><%= link_to "POST /contacts", "/rest/resources/#post_contacts" %></li>
+      <li><%= link_to "GET /contacts/:id", "/rest/resources/#get_contacts_id" %></li>
+      <li><%= link_to "PUT /contacts/:id", "/rest/resources/#put_contacts_id" %></li>
+      <li><%= link_to "DELETE /contacts/:id", "/rest/resources/#delete_contacts_id" %></li>
     </ul>
-    <h5><a href="/rest/resources/#employees">Employees</a></h5>
+    <h5><%= link_to "Employees", "/rest/resources/#employees" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_employee">GET /employee</a></li>
-      <li><a href="/rest/resources/#get_employees">GET /employees</a></li>
-      <li><a href="/rest/resources/#get_employees_id">GET /employees/:id</a></li>
-      <li><a href="/rest/resources/#put_employees_id">PUT /employees/:id</a></li>
-      <li><a href="/rest/resources/#post_employees_id_message">POST /employees/:id/message</a></li>
+      <li><%= link_to "GET /employee", "/rest/resources/#get_employee" %></li>
+      <li><%= link_to "GET /employees", "/rest/resources/#get_employees" %></li>
+      <li><%= link_to "GET /employees/:id", "/rest/resources/#get_employees_id" %></li>
+      <li><%= link_to "PUT /employees/:id", "/rest/resources/#put_employees_id" %></li>
+      <li><%= link_to "POST /employees/:id/message", "/rest/resources/#post_employees_id_message" %></li>
     </ul>
-    <h5><a href="/rest/resources/#employeegroups">EmployeeGroups</a></h5>
+    <h5><%= link_to "EmployeeGroups", "/rest/resources/#employeegroups" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_employee_groups">GET /employee_groups</a></li>
-      <li><a href="/rest/resources/#get_employee_groups_id">GET /employee_groups/:id</a></li>
-      <li><a href="/rest/resources/#get_employee_groups_id_employees">GET /employee_groups/:id/employees</a></li>
-      <li><a href="/rest/resources/#post_employee_groups_id_join">POST /employee_groups/:id/join</a></li>
-      <li><a href="/rest/resources/#post_employee_groups_id_leave">POST /employee_groups/:id/leave</a></li>
-      <li><a href="/rest/resources/#post_employee_groups_id_message">POST /employee_groups/:id/message</a></li>
+      <li><%= link_to "GET /employee_groups", "/rest/resources/#get_employee_groups" %></li>
+      <li><%= link_to "GET /employee_groups/:id", "/rest/resources/#get_employee_groups_id" %></li>
+      <li><%= link_to "GET /employee_groups/:id/employees", "/rest/resources/#get_employee_groups_id_employees" %></li>
+      <li><%= link_to "POST /employee_groups/:id/join", "/rest/resources/#post_employee_groups_id_join" %></li>
+      <li><%= link_to "POST /employee_groups/:id/leave", "/rest/resources/#post_employee_groups_id_leave" %></li>
+      <li><%= link_to "POST /employee_groups/:id/message", "/rest/resources/#post_employee_groups_id_message" %></li>
     </ul>
-    <h5><a href="/rest/resources/#receptions">Receptions</a></h5>
+    <h5><%= link_to "Receptions", "/rest/resources/#receptions" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_receptions">GET /receptions</a></li>
-      <li><a href="/rest/resources/#get_receptions_id">GET /receptions/:id</a></li>
+      <li><%= link_to "GET /receptions", "/rest/resources/#get_receptions" %></li>
+      <li><%= link_to "GET /receptions/:id", "/rest/resources/#get_receptions_id" %></li>
     </ul>
-    <h5><a href="/rest/resources/#voicemails">VoiceMails</a></h5>
+    <h5><%= link_to "VoiceMails", "/rest/resources/#voicemails" %></h5>
     <ul>
-      <li><a href="/rest/resources/#get_voice_mails">GET /voice_mails</a></li>
-      <li><a href="/rest/resources/#get_voice_mails_id">GET /voice_mails/:id</a></li>
-      <li><a href="/rest/resources/#put_voice_mails_id">PUT /voice_mails/:id</a></li>
-      <li><a href="/rest/resources/#delete_voice_mails_id">DELETE /voice_mails/:id</a></li>
+      <li><%= link_to "GET /voice_mails", "/rest/resources/#get_voice_mails" %></li>
+      <li><%= link_to "GET /voice_mails/:id", "/rest/resources/#get_voice_mails_id" %></li>
+      <li><%= link_to "PUT /voice_mails/:id", "/rest/resources/#put_voice_mails_id" %></li>
+      <li><%= link_to "DELETE /voice_mails/:id", "/rest/resources/#delete_voice_mails_id" %></li>
     </ul>
 
   </ul>

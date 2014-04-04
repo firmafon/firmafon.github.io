@@ -11,22 +11,23 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/">Firmafon API</a></h1>
+            <h1><%= link_to "Firmafon API", "/" %></h1>
           </li>
         </ul>
         <section class="top-bar-section">
           <ul>
             <li class="has-dropdown rest">
-              <a href="/rest/">REST</a>
+              <%= link_to "REST", "/rest/" %>
               <ul class="dropdown">
-                <li><a href="/rest/authentication/">Authentication</a></li>
-                <li><a href="/rest/resources/">Resources</a></li>
+                <li><%= link_to "Authentication", "/rest/authentication/" %></li>
+                <li><%= link_to "Resources", "/rest/resources/" %></li>
               </ul>
             </li>
             <li class="has-dropdown integrations">
-              <a href="/integrations/">Integrations</a>
+              <%= link_to "Integrations", "/integrations/" %>
               <ul class="dropdown">
                 <li>
+                  <%= link_to "Iframe", "/integrations/iframe/" %>
                   <a href="/integrations/iframe/">Iframe</a>
                 </li>
               </ul>
