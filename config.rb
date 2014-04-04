@@ -12,6 +12,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+activate :relative_assets
+set :relative_links, true
+
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, footnotes: true, autolink: true
 
@@ -25,9 +28,6 @@ end
 activate :livereload
 activate :directory_indexes
 activate :syntax, line_numbers: false
-
-activate :relative_assets
-set :relative_links, true
 
 helpers do
   def resource(key)
