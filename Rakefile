@@ -1,3 +1,5 @@
+# Most of this is from https://github.com/neo/middleman-gh-pages
+
 require 'fileutils'
 
 def remote_name
