@@ -26,6 +26,9 @@ activate :livereload
 activate :directory_indexes
 activate :syntax, line_numbers: false
 
+activate :relative_assets
+set :relative_links, true
+
 helpers do
   def resource(key)
     JSON.parse(open("./data/v2/#{key}.json").read)
