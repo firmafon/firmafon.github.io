@@ -1,8 +1,0 @@
-{
-  "id":1,
-  "title":"Example announcement",
-  "body":"<p>Some text that might contain HTML</p>",
-  "image_url":"http://example.com/image.png",
-  "button_title":"Read more",
-  "button_url":"http://firmafon.dk/read_more"
-}
